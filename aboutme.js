@@ -4,11 +4,11 @@ const question = [
     "where her was boarn?",
     "What is her profession",
     "what is her status",
-    "what is her charch"
+    "what is her charch",
 ]
 
 const ask = (aboutme = 0 )=> {
-    process.stdout.write(question[aboutme] + "\n")
+    process.stdout.write("\n\n" + question[aboutme] + " > ")
 
 }
 ask()
@@ -16,8 +16,14 @@ ask()
 const answer = []
 
 process.stdin.on("data", data => {
-process.stdout.write(data.toString().trim())
+answer.push(data.toString().trim())
 
-process.exit()
+if(answer.length < question.length){
+    ask(answer.length)
+}else{
+   console.log(answer)
+    process.exit()
+} 
+
 })
 
