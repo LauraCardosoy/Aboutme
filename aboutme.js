@@ -12,3 +12,9 @@ const ask = (aboutme = 0 )=> {
 
 }
 ask()
+
+const answer = []
+
+process.stdin.on("data", data => {
+    process.stdout.write(data)
+})
