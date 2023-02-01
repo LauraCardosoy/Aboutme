@@ -6,3 +6,8 @@ const question = [
     "what is her status",
     "what is her charch"
 ]
+
+const ask = (aboutme = 0 )=> {
+    process.stdout.write(question[aboutme] + "\n")
+
+}
