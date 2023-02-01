@@ -27,3 +27,7 @@ if(answer.length < question.length){
 
 })
 
+process.on("exit", () =>{
+    console.log( "Isso é sobre mim")
+})
+
