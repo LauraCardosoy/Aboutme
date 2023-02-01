@@ -11,3 +11,4 @@ const ask = (aboutme = 0 )=> {
     process.stdout.write(question[aboutme] + "\n")
 
 }
+ask()
