@@ -17,7 +17,7 @@ const myanswer = [
 ]
 
 const ask = (aboutme = 0 )=> {
-    process.stdout.write("\n\n" + question[aboutme] + " > ")
+    process.stdout.write("\n" + question[aboutme] + " > ")
 
 }
 ask()
@@ -37,12 +37,17 @@ if(answer.length < question.length){
 })
 
 process.on("exit", () => {
-    
-        if (myanswer[0] === answer[0]){
+
+        for(let i = 0; i < answer.length; i++ ){
+        
+           
+          if (myanswer[i] === answer[i]){
             console.log(`voce me conhece`)
         }else{
             console.log("Não estou a ver que logica usar")
         }
+       }  
+        
   
 })
 
