@@ -7,6 +7,15 @@ const question = [
     "what is her charch",
 ]
 
+const myanswer = [
+    "Laura Cardoso",
+    "29",
+    "Bié",
+    "Dev Junior",
+    "single",
+    "TJ"
+]
+
 const ask = (aboutme = 0 )=> {
     process.stdout.write("\n\n" + question[aboutme] + " > ")
 
@@ -27,7 +36,13 @@ if(answer.length < question.length){
 
 })
 
-process.on("exit", () =>{
-    console.log( "Isso é sobre mim")
+process.on("exit", () => {
+    
+        if (myanswer[0] === answer[0]){
+            console.log(`voce me conhece`)
+        }else{
+            console.log("Não estou a ver que logica usar")
+        }
+  
 })
 
