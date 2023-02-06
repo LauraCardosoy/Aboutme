@@ -37,17 +37,20 @@ if(answer.length < question.length){
 })
 
 process.on("exit", () => {
+ 
+        for(var i = 0; i < answer.length; i++ ){
 
-        for(let i = 0; i < answer.length; i++ ){
-        
-           
+       
+   
           if (myanswer[i] === answer[i]){
-            console.log(`voce me conhece`)
-        }else{
-            console.log("Não estou a ver que logica usar")
+
+            console.log(` respostas certas, voce me conhece` )
+     }else{
+            console.log(` voce não me conhece` )
+
         }
-       }  
-        
-  
+        }  
+       
+       
 })
 
